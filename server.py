@@ -28,7 +28,7 @@ def send_message():
     # Create the email message
     msg = Message(
         subject=f"Message from {name} - {topic}",
-        recipients=os.getenv('GMAIL_USERNAME'),  # Replace with your email address
+        recipients=[os.getenv('GMAIL_USERNAME')],  # Replace with your email address
         body=f"Name: {name}\nEmail: {email}\nTopic: {topic}\nMessage: {message}"
     )
     try:
