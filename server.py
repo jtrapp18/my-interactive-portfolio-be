@@ -13,7 +13,7 @@ app.config['MAIL_USE_TLS'] = True  # TLS encryption
 app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = os.getenv('GMAIL_USERNAME')  # Your Gmail address
 app.config['MAIL_PASSWORD'] = os.getenv('GMAIL_PASSWORD')  # Your Gmail password or app-specific password
-# app.config['MAIL_DEFAULT_SENDER'] = os.getenv('MAIL_USERNAME')  # Default sender (optional)
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('GMAIL_USERNAME')  # Default sender (optional)
 
 mail = Mail(app)
 
